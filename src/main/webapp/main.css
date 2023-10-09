@@ -1,3 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial, Helvetica, sans-serif';
+}
+
+body {
+
+    color: #edededed;
+
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -10,12 +23,12 @@ html {
 
 #header{
     height: 46px;
-    background-color: lightblue;
+    background-color: #666666;
     position: fixed;
     top:0;
     left:0;
     right:0;
-    z-index: 1;
+    z-index: 1;/*thuộc tính fixed nổi lên trên ảnh*/
 }
 #nav {
     display: inline-block;
@@ -55,7 +68,7 @@ html {
     list-style-type: none;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
     display: none;
-    min-width: 160px;
+    min-width: 200px;
     top: 100%;
     left:0;
 }
@@ -67,42 +80,173 @@ html {
     color:black;
     padding: 0 12px;
     line-height: 38px;
-    width: 200px;
-}
-#header .search-btn{
-    float: right;
-    padding: 0 21px;
-}
-#header .search-btn:hover{
-    background-color:red;
-    cursor: pointer;
+
 }
 
-#header .search-icon{
-    color: white;
-    font-size: 20px;
-    line-height: 46px;
-    font-weight: 300;
+
+
+
+#nav .nav-arrow-dow{
+    font-size: 10px;
 }
-#slider {
-    margin-top: 46px;
-    padding-top: 50%;
-    background: url(picture/sliderpicture.jpg) center center / cover no-repeat;
+
+
+
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo {
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight:500;
+    margin-right: 35px;
+    transition: 1s;
+}
+.navbar a:hover,
+nav :active {
+    color: #00abf0;
+    text-decoration: none;
+
+}
+
+
+.home {
+    padding-top: 46px;
+    height: 100vh;
+    background: url('picture/home1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.home-content {
+
+
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+.home-content p{
+    font-size: 16px;
+    padding: 10px 0 10px;
+}
+.home-content .btn-box {
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+}
+.btn-box a{
     position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: #CCFFFF;
+    border: 2px solid #CCFFFF;
+    border-radius: 8px;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    text-decoration: none;
+    color: #777777;
 }
-#slider .text-content{
-    color: white;
+.btn-box a:nth-child(2)
+{
+    background: transparent;
+    color:#CCFFFF;
+}
+.btn-box a:nth-child(2)::before {
+    background: #CCFFFF;
+}
+.btn-box a:nth-child(2):hover {
+    color: #777777;
+
+}
+
+.btn-box a::before{
+    content: '';
     position: absolute;
-    bottom: 36px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    top: 0;
+    left:0;
+    width: 0;
+    height: 100%;
+    background: #777777;
+    color: #000000;
+    z-index: -1;
+    transition: .5s;
+
+
 }
-#slider .text-heading{
-    font-weight: 500;
-    font-size: 24px;
+.btn-box a:hover::before{
+    width: 100%;
 }
-#slider .text-description{
-    padding-top: 25px;
-    font-size: 15px;
+.home-sci {
+    position: absolute;
+    bottom: 0;
+    width: 170px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: black;
+    border: 2px solid #CCFFFF;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ffffff;
+    z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover::before {
+    width: 100%;
 }
