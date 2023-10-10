@@ -5,6 +5,7 @@
   <title>Personal Website</title>
   <link rel="stylesheet" href="main.css" type="text/css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 
@@ -60,6 +61,31 @@
   </section>
   </div>
 </div>
+
+<div class="container mt-5">
+  <h2>Liên hệ</h2>
+  <form>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Nhập địa chỉ email của bạn">
+    </div>
+    <div class="form-group">
+      <label for="title">Tiêu đề:</label>
+      <input type="text" class="form-control" id="title" placeholder="Nhập tiêu đề">
+    </div>
+    <div class="form-group">
+      <label for="message">Tin nhắn:</label>
+      <textarea class="form-control" id="message" rows="5" placeholder="Nhập tin nhắn của bạn"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Gửi</button>
+  </form>
+</div>
+
+<!-- Link đến các tệp JS Bootstrap (chú ý đặt sau thẻ </body>) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>
 
