@@ -1,0 +1,16 @@
+version: '3'
+services:
+  sql-gate-way-db:
+    container_name: sql-gate-way-db
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=murach
+      - MYSQL_ROOT_HOST=%
+    ports:
+      - "3307:3306"
+    volumes:
+      - sql-gate-way-data:/var/lib/mysql
+
+volumes:
+  sql-gate-way-data:
